@@ -1,3 +1,5 @@
+![](/images/ram.png)
+
 ### 缘起
 
 在电商项目的前端业务中，我们经常会遇到一些复杂一点的界面需求。
@@ -15,6 +17,7 @@
 
 ### Demo
 Demo 如下，用到了[Carthage](https://github.com/Carthage/Carthage) 来管理第三方库，用了[MJRefresh](https://github.com/CoderMJLee/MJRefresh), 和[FHHFPSIndicator](https://github.com/002and001/FHHFPSIndicator) 监控FPS，简单的实现效果。
+
 [下载地址](https://github.com/newjia/MultiScrollviewNAsync)：
 
-![](/scroll.gif)
+![](/images/scroll.gif)

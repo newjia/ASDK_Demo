@@ -106,7 +106,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *imgList = [self.dataDic objectForKey:@"imageList"];
-    NSString *url = imgList [indexPath.row];
+    NSString *url = @"http://haiqihuocang.oss-cn-hangzhou.aliyuncs.com/product_img/20170418149250534284810491.jpg";// imgList [indexPath.row];
     DemoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
 
     cell.imageUrl = url;

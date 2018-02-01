@@ -34,6 +34,13 @@
     [self addRefreshHeader];
     //加载数据
     [self loadData];
+
+    if (@available(iOS 11.0, *)) {
+        mainCollectionNode.view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+
 }
 
 
