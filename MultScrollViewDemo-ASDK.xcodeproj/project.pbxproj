@@ -36,35 +36,18 @@
 		2A429B9B1F258050006BBD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A429B9A1F258050006BBD92 /* Assets.xcassets */; };
 		2A429B9E1F258050006BBD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A429B9C1F258050006BBD92 /* LaunchScreen.storyboard */; };
 		2ACE32561F2586DA00F29C76 /* DemoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE32551F2586DA00F29C76 /* DemoNode.m */; };
-		2ACE325D1F25BD4600F29C76 /* AsyncDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACE324C1F2584F800F29C76 /* AsyncDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2ACE325F1F25BD4600F29C76 /* PINCache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACE324D1F2584F800F29C76 /* PINCache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2ACE32611F25BD4600F29C76 /* PINOperation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACE324E1F2584F800F29C76 /* PINOperation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2ACE32631F25BD4600F29C76 /* PINRemoteImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACE324F1F2584F800F29C76 /* PINRemoteImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2ACE32661F25BDEB00F29C76 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACE32651F25BDEB00F29C76 /* Reveal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2ACE32691F25C0E300F29C76 /* DemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE32681F25C0E300F29C76 /* DemoCell.m */; };
 		2ACE326F1F25C56300F29C76 /* UIWindow+FHH.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE326B1F25C56300F29C76 /* UIWindow+FHH.m */; };
 		2ACE32701F25C56300F29C76 /* FHHFPSIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE326E1F25C56300F29C76 /* FHHFPSIndicator.m */; };
-		2AD52DE11F260D1F002F4BDD /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2D28051F25DF8B0007D53B /* SDWebImage.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		2AD52DE21F260D3B002F4BDD /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2D28051F25DF8B0007D53B /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AEE43FA2303B673009DD151 /* NAviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE43F92303B673009DD151 /* NAviViewController.m */; };
+		2AEE43FC2303D703009DD151 /* AsyncDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE43FB2303D703009DD151 /* AsyncDisplayKit.framework */; };
+		2AEE43FE2303D737009DD151 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE43FD2303D737009DD151 /* SDWebImage.framework */; };
+		2AEE44002303D766009DD151 /* FHHFPSIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE43FF2303D766009DD151 /* FHHFPSIndicator.framework */; };
+		2AEE44022303D766009DD151 /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE44012303D766009DD151 /* PINCache.framework */; };
+		2AEE44042303D766009DD151 /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE44032303D766009DD151 /* PINOperation.framework */; };
+		2AEE44062303D766009DD151 /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE44052303D766009DD151 /* PINRemoteImage.framework */; };
+		2AEE44082303D766009DD151 /* Pods_MultScrollViewDemo_ASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE44072303D766009DD151 /* Pods_MultScrollViewDemo_ASDK.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2A429BA51F258050006BBD92 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A429B831F258050006BBD92 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2A429B8A1F258050006BBD92;
-			remoteInfo = "MultScrollViewDemo-ASDK";
-		};
-		2A429BB01F258050006BBD92 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A429B831F258050006BBD92 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2A429B8A1F258050006BBD92;
-			remoteInfo = "MultScrollViewDemo-ASDK";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		2ACE32641F25BD4700F29C76 /* Embed Frameworks */ = {
@@ -73,11 +56,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2AD52DE21F260D3B002F4BDD /* SDWebImage.framework in Embed Frameworks */,
-				2ACE325D1F25BD4600F29C76 /* AsyncDisplayKit.framework in Embed Frameworks */,
-				2ACE32611F25BD4600F29C76 /* PINOperation.framework in Embed Frameworks */,
-				2ACE32631F25BD4600F29C76 /* PINRemoteImage.framework in Embed Frameworks */,
-				2ACE325F1F25BD4600F29C76 /* PINCache.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1DE42B41CE7E59B2C1B777C3 /* Pods-MultScrollViewDemo-ASDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultScrollViewDemo-ASDK.debug.xcconfig"; path = "Target Support Files/Pods-MultScrollViewDemo-ASDK/Pods-MultScrollViewDemo-ASDK.debug.xcconfig"; sourceTree = "<group>"; };
 		2A2D27BD1F25CB640007D53B /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		2A2D27BE1F25CB640007D53B /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
 		2A2D27BF1F25CB640007D53B /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
@@ -126,7 +105,6 @@
 		2A2D27E91F25CB640007D53B /* MJRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooter.h; sourceTree = "<group>"; };
 		2A2D27EA1F25CB640007D53B /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
 		2A2D28031F25D4710007D53B /* fakeDic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fakeDic.json; sourceTree = "<group>"; };
-		2A2D28051F25DF8B0007D53B /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		2A2D28081F25F4A90007D53B /* moreFakeDic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moreFakeDic.json; sourceTree = SOURCE_ROOT; };
 		2A429B8B1F258050006BBD92 /* MultScrollViewDemo-ASDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MultScrollViewDemo-ASDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A429B8F1F258050006BBD92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -138,12 +116,6 @@
 		2A429B9A1F258050006BBD92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A429B9D1F258050006BBD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A429B9F1F258050006BBD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A429BA41F258050006BBD92 /* MultScrollViewDemo-ASDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MultScrollViewDemo-ASDKTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A429BAF1F258050006BBD92 /* MultScrollViewDemo-ASDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MultScrollViewDemo-ASDKUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ACE324C1F2584F800F29C76 /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncDisplayKit.framework; path = Carthage/Build/iOS/AsyncDisplayKit.framework; sourceTree = "<group>"; };
-		2ACE324D1F2584F800F29C76 /* PINCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCache.framework; path = Carthage/Build/iOS/PINCache.framework; sourceTree = "<group>"; };
-		2ACE324E1F2584F800F29C76 /* PINOperation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINOperation.framework; path = Carthage/Build/iOS/PINOperation.framework; sourceTree = "<group>"; };
-		2ACE324F1F2584F800F29C76 /* PINRemoteImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINRemoteImage.framework; path = Carthage/Build/iOS/PINRemoteImage.framework; sourceTree = "<group>"; };
 		2ACE32541F2586DA00F29C76 /* DemoNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoNode.h; sourceTree = "<group>"; };
 		2ACE32551F2586DA00F29C76 /* DemoNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoNode.m; sourceTree = "<group>"; };
 		2ACE32651F25BDEB00F29C76 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
@@ -155,6 +127,14 @@
 		2ACE326E1F25C56300F29C76 /* FHHFPSIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHHFPSIndicator.m; sourceTree = "<group>"; };
 		2AEE43F82303B673009DD151 /* NAviViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAviViewController.h; sourceTree = "<group>"; };
 		2AEE43F92303B673009DD151 /* NAviViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAviViewController.m; sourceTree = "<group>"; };
+		2AEE43FB2303D703009DD151 /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AsyncDisplayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AEE43FD2303D737009DD151 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AEE43FF2303D766009DD151 /* FHHFPSIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FHHFPSIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AEE44012303D766009DD151 /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AEE44032303D766009DD151 /* PINOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PINOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AEE44052303D766009DD151 /* PINRemoteImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PINRemoteImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AEE44072303D766009DD151 /* Pods_MultScrollViewDemo_ASDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MultScrollViewDemo_ASDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DABDCDE7A7F6FA1FC21A1F2B /* Pods-MultScrollViewDemo-ASDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultScrollViewDemo-ASDK.release.xcconfig"; path = "Target Support Files/Pods-MultScrollViewDemo-ASDK/Pods-MultScrollViewDemo-ASDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,22 +142,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AD52DE11F260D1F002F4BDD /* SDWebImage.framework in Frameworks */,
-				2ACE32661F25BDEB00F29C76 /* Reveal.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A429BA11F258050006BBD92 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A429BAC1F258050006BBD92 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				2AEE44002303D766009DD151 /* FHHFPSIndicator.framework in Frameworks */,
+				2AEE44022303D766009DD151 /* PINCache.framework in Frameworks */,
+				2AEE44042303D766009DD151 /* PINOperation.framework in Frameworks */,
+				2AEE44062303D766009DD151 /* PINRemoteImage.framework in Frameworks */,
+				2AEE44082303D766009DD151 /* Pods_MultScrollViewDemo_ASDK.framework in Frameworks */,
+				2AEE43FE2303D737009DD151 /* SDWebImage.framework in Frameworks */,
+				2AEE43FC2303D703009DD151 /* AsyncDisplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +256,7 @@
 				2A429B8D1F258050006BBD92 /* MultScrollViewDemo-ASDK */,
 				2A429B8C1F258050006BBD92 /* Products */,
 				2ACE324B1F2584F800F29C76 /* Frameworks */,
+				63AF7701BB956C9A8BC98A0C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -292,8 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				2A429B8B1F258050006BBD92 /* MultScrollViewDemo-ASDK.app */,
-				2A429BA41F258050006BBD92 /* MultScrollViewDemo-ASDKTests.xctest */,
-				2A429BAF1F258050006BBD92 /* MultScrollViewDemo-ASDKUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,11 +305,13 @@
 		2ACE324B1F2584F800F29C76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2A2D28051F25DF8B0007D53B /* SDWebImage.framework */,
-				2ACE324C1F2584F800F29C76 /* AsyncDisplayKit.framework */,
-				2ACE324D1F2584F800F29C76 /* PINCache.framework */,
-				2ACE324E1F2584F800F29C76 /* PINOperation.framework */,
-				2ACE324F1F2584F800F29C76 /* PINRemoteImage.framework */,
+				2AEE43FF2303D766009DD151 /* FHHFPSIndicator.framework */,
+				2AEE44012303D766009DD151 /* PINCache.framework */,
+				2AEE44032303D766009DD151 /* PINOperation.framework */,
+				2AEE44052303D766009DD151 /* PINRemoteImage.framework */,
+				2AEE44072303D766009DD151 /* Pods_MultScrollViewDemo_ASDK.framework */,
+				2AEE43FD2303D737009DD151 /* SDWebImage.framework */,
+				2AEE43FB2303D703009DD151 /* AsyncDisplayKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -364,6 +336,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		63AF7701BB956C9A8BC98A0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DE42B41CE7E59B2C1B777C3 /* Pods-MultScrollViewDemo-ASDK.debug.xcconfig */,
+				DABDCDE7A7F6FA1FC21A1F2B /* Pods-MultScrollViewDemo-ASDK.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -371,10 +352,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A429BB81F258050006BBD92 /* Build configuration list for PBXNativeTarget "MultScrollViewDemo-ASDK" */;
 			buildPhases = (
+				7538D19843B24CE2441EDD6F /* [CP] Check Pods Manifest.lock */,
 				2A429B871F258050006BBD92 /* Sources */,
 				2A429B881F258050006BBD92 /* Frameworks */,
 				2A429B891F258050006BBD92 /* Resources */,
 				2ACE32641F25BD4700F29C76 /* Embed Frameworks */,
+				B70EFB965B8B3B2DB6A33C9C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -384,42 +367,6 @@
 			productName = "MultScrollViewDemo-ASDK";
 			productReference = 2A429B8B1F258050006BBD92 /* MultScrollViewDemo-ASDK.app */;
 			productType = "com.apple.product-type.application";
-		};
-		2A429BA31F258050006BBD92 /* MultScrollViewDemo-ASDKTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2A429BBB1F258050006BBD92 /* Build configuration list for PBXNativeTarget "MultScrollViewDemo-ASDKTests" */;
-			buildPhases = (
-				2A429BA01F258050006BBD92 /* Sources */,
-				2A429BA11F258050006BBD92 /* Frameworks */,
-				2A429BA21F258050006BBD92 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2A429BA61F258050006BBD92 /* PBXTargetDependency */,
-			);
-			name = "MultScrollViewDemo-ASDKTests";
-			productName = "MultScrollViewDemo-ASDKTests";
-			productReference = 2A429BA41F258050006BBD92 /* MultScrollViewDemo-ASDKTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2A429BAE1F258050006BBD92 /* MultScrollViewDemo-ASDKUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2A429BBE1F258050006BBD92 /* Build configuration list for PBXNativeTarget "MultScrollViewDemo-ASDKUITests" */;
-			buildPhases = (
-				2A429BAB1F258050006BBD92 /* Sources */,
-				2A429BAC1F258050006BBD92 /* Frameworks */,
-				2A429BAD1F258050006BBD92 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2A429BB11F258050006BBD92 /* PBXTargetDependency */,
-			);
-			name = "MultScrollViewDemo-ASDKUITests";
-			productName = "MultScrollViewDemo-ASDKUITests";
-			productReference = 2A429BAF1F258050006BBD92 /* MultScrollViewDemo-ASDKUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -434,16 +381,6 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = SG2A6YF5WN;
 						ProvisioningStyle = Automatic;
-					};
-					2A429BA31F258050006BBD92 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 2A429B8A1F258050006BBD92;
-					};
-					2A429BAE1F258050006BBD92 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 2A429B8A1F258050006BBD92;
 					};
 				};
 			};
@@ -461,8 +398,6 @@
 			projectRoot = "";
 			targets = (
 				2A429B8A1F258050006BBD92 /* MultScrollViewDemo-ASDK */,
-				2A429BA31F258050006BBD92 /* MultScrollViewDemo-ASDKTests */,
-				2A429BAE1F258050006BBD92 /* MultScrollViewDemo-ASDKUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -481,21 +416,60 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A429BA21F258050006BBD92 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A429BAD1F258050006BBD92 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7538D19843B24CE2441EDD6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultScrollViewDemo-ASDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B70EFB965B8B3B2DB6A33C9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultScrollViewDemo-ASDK/Pods-MultScrollViewDemo-ASDK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FHHFPSIndicator/FHHFPSIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FHHFPSIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MultScrollViewDemo-ASDK/Pods-MultScrollViewDemo-ASDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2A429B871F258050006BBD92 /* Sources */ = {
@@ -532,34 +506,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A429BA01F258050006BBD92 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A429BAB1F258050006BBD92 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2A429BA61F258050006BBD92 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2A429B8A1F258050006BBD92 /* MultScrollViewDemo-ASDK */;
-			targetProxy = 2A429BA51F258050006BBD92 /* PBXContainerItemProxy */;
-		};
-		2A429BB11F258050006BBD92 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2A429B8A1F258050006BBD92 /* MultScrollViewDemo-ASDK */;
-			targetProxy = 2A429BB01F258050006BBD92 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2A429B971F258050006BBD92 /* Main.storyboard */ = {
@@ -689,6 +636,7 @@
 		};
 		2A429BB91F258050006BBD92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DE42B41CE7E59B2C1B777C3 /* Pods-MultScrollViewDemo-ASDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SG2A6YF5WN;
@@ -713,6 +661,7 @@
 		};
 		2A429BBA1F258050006BBD92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DABDCDE7A7F6FA1FC21A1F2B /* Pods-MultScrollViewDemo-ASDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SG2A6YF5WN;
@@ -735,52 +684,6 @@
 			};
 			name = Release;
 		};
-		2A429BBC1F258050006BBD92 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "MultScrollViewDemo-ASDKTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lj.MultScrollViewDemo-ASDKTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MultScrollViewDemo-ASDK.app/MultScrollViewDemo-ASDK";
-			};
-			name = Debug;
-		};
-		2A429BBD1F258050006BBD92 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "MultScrollViewDemo-ASDKTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lj.MultScrollViewDemo-ASDKTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MultScrollViewDemo-ASDK.app/MultScrollViewDemo-ASDK";
-			};
-			name = Release;
-		};
-		2A429BBF1F258050006BBD92 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "MultScrollViewDemo-ASDKUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lj.MultScrollViewDemo-ASDKUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "MultScrollViewDemo-ASDK";
-			};
-			name = Debug;
-		};
-		2A429BC01F258050006BBD92 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "MultScrollViewDemo-ASDKUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lj.MultScrollViewDemo-ASDKUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "MultScrollViewDemo-ASDK";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -798,24 +701,6 @@
 			buildConfigurations = (
 				2A429BB91F258050006BBD92 /* Debug */,
 				2A429BBA1F258050006BBD92 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2A429BBB1F258050006BBD92 /* Build configuration list for PBXNativeTarget "MultScrollViewDemo-ASDKTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2A429BBC1F258050006BBD92 /* Debug */,
-				2A429BBD1F258050006BBD92 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2A429BBE1F258050006BBD92 /* Build configuration list for PBXNativeTarget "MultScrollViewDemo-ASDKUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2A429BBF1F258050006BBD92 /* Debug */,
-				2A429BC01F258050006BBD92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

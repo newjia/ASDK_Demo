@@ -114,6 +114,7 @@
         return ;
     }
     NSLog(@"obj        %@", json);
+     
     NSArray *products = [json objectForKey:@"data"];
         if (context) {
             // 加载更多
@@ -124,7 +125,10 @@
                 }
 
                 [dataArray addObjectsFromArray:products];
-                [mainCollectionNode insertItemsAtIndexPaths:indexPaths];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [mainCollectionNode insertItemsAtIndexPaths:indexPaths];
+
+                });
 
                 _haveMore = YES;
 
