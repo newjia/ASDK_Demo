@@ -67,6 +67,7 @@
     mainCollectionNode = [[ASCollectionNode alloc] initWithCollectionViewLayout:layout];
     mainCollectionNode.dataSource = self;
     mainCollectionNode.delegate = self;
+    
     mainCollectionNode.backgroundColor = [UIColor whiteColor];
     [self.view addSubnode:mainCollectionNode];
 
@@ -165,7 +166,7 @@
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
-    mainCollectionNode.frame = self.view.frame;
+    mainCollectionNode.frame = CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height - 88);
 }
 
 - (NSInteger)collectionNode:(ASCollectionNode *)collectionNode numberOfItemsInSection:(NSInteger)section

@@ -35,8 +35,6 @@
 		2A429B991F258050006BBD92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A429B971F258050006BBD92 /* Main.storyboard */; };
 		2A429B9B1F258050006BBD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A429B9A1F258050006BBD92 /* Assets.xcassets */; };
 		2A429B9E1F258050006BBD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A429B9C1F258050006BBD92 /* LaunchScreen.storyboard */; };
-		2A429BA91F258050006BBD92 /* MultScrollViewDemo_ASDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A429BA81F258050006BBD92 /* MultScrollViewDemo_ASDKTests.m */; };
-		2A429BB41F258050006BBD92 /* MultScrollViewDemo_ASDKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A429BB31F258050006BBD92 /* MultScrollViewDemo_ASDKUITests.m */; };
 		2ACE32561F2586DA00F29C76 /* DemoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE32551F2586DA00F29C76 /* DemoNode.m */; };
 		2ACE325D1F25BD4600F29C76 /* AsyncDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACE324C1F2584F800F29C76 /* AsyncDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2ACE325F1F25BD4600F29C76 /* PINCache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACE324D1F2584F800F29C76 /* PINCache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -48,6 +46,7 @@
 		2ACE32701F25C56300F29C76 /* FHHFPSIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE326E1F25C56300F29C76 /* FHHFPSIndicator.m */; };
 		2AD52DE11F260D1F002F4BDD /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2D28051F25DF8B0007D53B /* SDWebImage.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2AD52DE21F260D3B002F4BDD /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2D28051F25DF8B0007D53B /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2AEE43FA2303B673009DD151 /* NAviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE43F92303B673009DD151 /* NAviViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,11 +139,7 @@
 		2A429B9D1F258050006BBD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A429B9F1F258050006BBD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A429BA41F258050006BBD92 /* MultScrollViewDemo-ASDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MultScrollViewDemo-ASDKTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A429BA81F258050006BBD92 /* MultScrollViewDemo_ASDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultScrollViewDemo_ASDKTests.m; sourceTree = "<group>"; };
-		2A429BAA1F258050006BBD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A429BAF1F258050006BBD92 /* MultScrollViewDemo-ASDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MultScrollViewDemo-ASDKUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A429BB31F258050006BBD92 /* MultScrollViewDemo_ASDKUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultScrollViewDemo_ASDKUITests.m; sourceTree = "<group>"; };
-		2A429BB51F258050006BBD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ACE324C1F2584F800F29C76 /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncDisplayKit.framework; path = Carthage/Build/iOS/AsyncDisplayKit.framework; sourceTree = "<group>"; };
 		2ACE324D1F2584F800F29C76 /* PINCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCache.framework; path = Carthage/Build/iOS/PINCache.framework; sourceTree = "<group>"; };
 		2ACE324E1F2584F800F29C76 /* PINOperation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINOperation.framework; path = Carthage/Build/iOS/PINOperation.framework; sourceTree = "<group>"; };
@@ -158,6 +153,8 @@
 		2ACE326C1F25C56300F29C76 /* FHHFPSIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHHFPSIndicator.h; sourceTree = "<group>"; };
 		2ACE326D1F25C56300F29C76 /* UIWindow+FHH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+FHH.h"; sourceTree = "<group>"; };
 		2ACE326E1F25C56300F29C76 /* FHHFPSIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHHFPSIndicator.m; sourceTree = "<group>"; };
+		2AEE43F82303B673009DD151 /* NAviViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAviViewController.h; sourceTree = "<group>"; };
+		2AEE43F92303B673009DD151 /* NAviViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAviViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,8 +283,6 @@
 			isa = PBXGroup;
 			children = (
 				2A429B8D1F258050006BBD92 /* MultScrollViewDemo-ASDK */,
-				2A429BA71F258050006BBD92 /* MultScrollViewDemo-ASDKTests */,
-				2A429BB21F258050006BBD92 /* MultScrollViewDemo-ASDKUITests */,
 				2A429B8C1F258050006BBD92 /* Products */,
 				2ACE324B1F2584F800F29C76 /* Frameworks */,
 			);
@@ -313,6 +308,8 @@
 				2A429B921F258050006BBD92 /* AppDelegate.m */,
 				2A429B941F258050006BBD92 /* ViewController.h */,
 				2A429B951F258050006BBD92 /* ViewController.m */,
+				2AEE43F82303B673009DD151 /* NAviViewController.h */,
+				2AEE43F92303B673009DD151 /* NAviViewController.m */,
 				2ACE32541F2586DA00F29C76 /* DemoNode.h */,
 				2ACE32551F2586DA00F29C76 /* DemoNode.m */,
 				2ACE32671F25C0E300F29C76 /* DemoCell.h */,
@@ -333,24 +330,6 @@
 				2A429B8F1F258050006BBD92 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2A429BA71F258050006BBD92 /* MultScrollViewDemo-ASDKTests */ = {
-			isa = PBXGroup;
-			children = (
-				2A429BA81F258050006BBD92 /* MultScrollViewDemo_ASDKTests.m */,
-				2A429BAA1F258050006BBD92 /* Info.plist */,
-			);
-			path = "MultScrollViewDemo-ASDKTests";
-			sourceTree = "<group>";
-		};
-		2A429BB21F258050006BBD92 /* MultScrollViewDemo-ASDKUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2A429BB31F258050006BBD92 /* MultScrollViewDemo_ASDKUITests.m */,
-				2A429BB51F258050006BBD92 /* Info.plist */,
-			);
-			path = "MultScrollViewDemo-ASDKUITests";
 			sourceTree = "<group>";
 		};
 		2ACE324B1F2584F800F29C76 /* Frameworks */ = {
@@ -448,12 +427,12 @@
 		2A429B831F258050006BBD92 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Nils Li";
 				TargetAttributes = {
 					2A429B8A1F258050006BBD92 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = G46AB7H388;
+						DevelopmentTeam = SG2A6YF5WN;
 						ProvisioningStyle = Automatic;
 					};
 					2A429BA31F258050006BBD92 = {
@@ -470,7 +449,7 @@
 			};
 			buildConfigurationList = 2A429B861F258050006BBD92 /* Build configuration list for PBXProject "MultScrollViewDemo-ASDK" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -544,6 +523,7 @@
 				2A2D27F11F25CB640007D53B /* MJRefreshBackGifFooter.m in Sources */,
 				2A2D27EB1F25CB640007D53B /* UIScrollView+MJRefresh.m in Sources */,
 				2A2D27F01F25CB640007D53B /* UIView+MJExtension.m in Sources */,
+				2AEE43FA2303B673009DD151 /* NAviViewController.m in Sources */,
 				2A2D27EC1F25CB640007D53B /* MJRefreshConst.m in Sources */,
 				2A429B931F258050006BBD92 /* AppDelegate.m in Sources */,
 				2A429B901F258050006BBD92 /* main.m in Sources */,
@@ -556,7 +536,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A429BA91F258050006BBD92 /* MultScrollViewDemo_ASDKTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +543,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A429BB41F258050006BBD92 /* MultScrollViewDemo_ASDKUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,15 +591,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -661,15 +647,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -697,7 +691,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G46AB7H388;
+				DEVELOPMENT_TEAM = SG2A6YF5WN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -721,7 +715,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G46AB7H388;
+				DEVELOPMENT_TEAM = SG2A6YF5WN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

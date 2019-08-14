@@ -56,6 +56,7 @@
 {
     UIImageView *bannerIV = [[UIImageView alloc] init];
     bannerIV.backgroundColor = [UIColor whiteColor];
+    bannerIV.contentMode = UIViewContentModeScaleAspectFill;
     NSString *imageUrl = [self.dataDic objectForKey:@"banner"];
     [self.view addSubview:bannerIV];
     [bannerIV sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
@@ -106,7 +107,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *imgList = [self.dataDic objectForKey:@"imageList"];
-    NSString *url = @"http://haiqihuocang.oss-cn-hangzhou.aliyuncs.com/product_img/20170418149250534284810491.jpg";// imgList [indexPath.row];
+    NSString *url = @"https://img14.360buyimg.com/n0/jfs/t2656/295/34058120/362134/d92995e5/56fc835dNe349b797.jpg";// imgList [indexPath.row];
     DemoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
 
     cell.imageUrl = url;

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NAviViewController.h"
 #import "ViewController.h"
 #if defined(DEBUG) || defined(_DEBUG)
 #import "FHHFPSIndicator.h"
@@ -27,10 +28,10 @@
     [self.window makeKeyAndVisible];
     // add the follwing code after the window become keyAndVisible
 #if defined(DEBUG) || defined(_DEBUG)
+    [FHHFPSIndicator sharedFPSIndicator].fpsLabelPosition = FPSIndicatorPositionTopLeft;
     [[FHHFPSIndicator sharedFPSIndicator] show];
-    //        [FHHFPSIndicator sharedFPSIndicator].fpsLabelPosition = FPSIndicatorPositionTopRight;
 #endif
-    self.window.rootViewController = [[ViewController alloc] init];
+    self.window.rootViewController = [[NAviViewController alloc] initWithRootViewController:[[ViewController alloc] init]];
 
     return YES;
 }
