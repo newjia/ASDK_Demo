@@ -12,7 +12,7 @@
 {
     UIImageView *logoIV;
 }
-
+@property (strong, nonatomic) UIImageView *logoIV;
 @property (strong, nonatomic) NSString *imageUrl;
 
 @end

@@ -9,6 +9,9 @@
 #import "DemoCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 @implementation DemoCell
+
+@synthesize logoIV;
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
@@ -23,7 +26,28 @@
 
 - (void)setImageUrl:(NSString *)imageUrl
 {
-    [logoIV sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
+ 
+    __block UIActivityIndicatorView *activityIndicator;
+    __weak typeof(self) weakSelf = self;
+    [logoIV sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil options:SDWebImageProgressiveLoad progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        if (!activityIndicator)
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.logoIV addSubview:activityIndicator = [UIActivityIndicatorView.alloc initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray]];
+                   activityIndicator.center = weakSelf.logoIV.center;
+                   [activityIndicator startAnimating];
+            });
+   
+        }
+    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [activityIndicator removeFromSuperview];
+             activityIndicator = nil;
+        });
+ 
+    }];
+    
+    
 }
 
 @end

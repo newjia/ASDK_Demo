@@ -60,12 +60,26 @@
     NSString *imageUrl = [self.dataDic objectForKey:@"banner"];
     [self.view addSubview:bannerIV];
  
-    [bannerIV sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil options:1 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-        //
+    // 给 加载图，添加菊花
+    __block UIActivityIndicatorView *activityIndicator;
+    [bannerIV sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil options:SDWebImageProgressiveLoad progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        if (!activityIndicator)
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [bannerIV addSubview:activityIndicator = [UIActivityIndicatorView.alloc initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray]];
+                activityIndicator.center = bannerIV.center;
+                [activityIndicator startAnimating];
+            });
+            
+        }
     } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-                bannerIV.image = image;
-
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [activityIndicator removeFromSuperview];
+            activityIndicator = nil;
+        });
+        
     }];
+ 
     _bannerIV = bannerIV;
 }
 
@@ -113,7 +127,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *imgList = [self.dataDic objectForKey:@"imageList"];
-    NSString *url = @"https://img14.360buyimg.com/n0/jfs/t2656/295/34058120/362134/d92995e5/56fc835dNe349b797.jpg";// imgList [indexPath.row];
+    NSString *url =   imgList [indexPath.row];
     DemoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
 
     cell.imageUrl = url;
