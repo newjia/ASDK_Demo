@@ -13,11 +13,21 @@
 我们开发团队考虑良久，最终采用的是有Facebook 提供的[AsyncDisplayKit](https://github.com/texturegroup/texture) 的框架，通过ASTableNode 主框架，横向滚动图用ASCollectionNode 来做渲染，由于ASDK的离屏渲染机制以及FlexBox布局，最终达到60FPS 的丝滑体验。
 
 ### 实施：
-待补充，今天先回家了。
-
 ### Demo
-Demo 如下，用到了[Carthage](https://github.com/Carthage/Carthage) 来管理第三方库，用了[MJRefresh](https://github.com/CoderMJLee/MJRefresh), 和[FHHFPSIndicator](https://github.com/002and001/FHHFPSIndicator) 监控FPS，简单的实现效果。
+Demo 如下， 用了[MJRefresh](https://github.com/CoderMJLee/MJRefresh), 和[FHHFPSIndicator](https://github.com/002and001/FHHFPSIndicator) 监控FPS，简单的实现效果。
 
-[下载地址](https://github.com/newjia/MultiScrollviewNAsync)：
+### 使用
+
+下载后，记得安装Pods
+
+```bash
+pod install
+```
+
+
+
+
+
+### 样品演示
 
 ![](/images/scroll.gif)
