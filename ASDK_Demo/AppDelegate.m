@@ -9,9 +9,9 @@
 #import "AppDelegate.h"
 #import "NAviViewController.h"
 #import "ViewController.h"
-#if defined(DEBUG) || defined(_DEBUG)
-#import "FHHFPSIndicator.h"
-#endif
+//#if defined(DEBUG) || defined(_DEBUG)
+//#import "FHHFPSIndicator.h"
+//#endif
 
 #import "MJRefresh.h"
 #import <SDWebImage/SDWebImage.h>
@@ -27,10 +27,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     // add the follwing code after the window become keyAndVisible
-#if defined(DEBUG) || defined(_DEBUG)
-    [FHHFPSIndicator sharedFPSIndicator].fpsLabelPosition = FPSIndicatorPositionTopLeft;
-    [[FHHFPSIndicator sharedFPSIndicator] show];
-#endif
+//#if defined(DEBUG) || defined(_DEBUG)
+//    [FHHFPSIndicator sharedFPSIndicator].fpsLabelPosition = FPSIndicatorPositionTopLeft;
+//    [[FHHFPSIndicator sharedFPSIndicator] show];
+//#endif
     self.window.rootViewController = [[NAviViewController alloc] initWithRootViewController:[[ViewController alloc] init]];
 
     return YES;

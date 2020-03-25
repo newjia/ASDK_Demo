@@ -9,7 +9,7 @@ target 'ASDK_Demo' do
   use_frameworks!
 
   # Pods for ASDK_Demo
-  pod "FHHFPSIndicator" 		# show FPS
   pod "Texture"
   pod 'SDWebImage'
+
 end

@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-ASDK_Demo/Pods-ASDK_Demo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/LHPerformanceStatusBar/LHPerformanceStatusBar.framework
+${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework
+${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework
+${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework

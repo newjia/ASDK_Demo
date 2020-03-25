@@ -15,8 +15,7 @@
     if (self) {
         [self initUI];
         // 使用静态图片
-        NSString *string = @"http://haiqihuocang.oss-cn-hangzhou.aliyuncs.com/product_img/20170413149206582284675139.jpg";  //(NSString *)info;
-        self.imageNode.URL = [NSURL URLWithString:string];
+  
 
     }
     return self;

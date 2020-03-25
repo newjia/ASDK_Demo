@@ -59,7 +59,13 @@
     bannerIV.contentMode = UIViewContentModeScaleAspectFill;
     NSString *imageUrl = [self.dataDic objectForKey:@"banner"];
     [self.view addSubview:bannerIV];
-    [bannerIV sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
+ 
+    [bannerIV sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil options:1 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        //
+    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+                bannerIV.image = image;
+
+    }];
     _bannerIV = bannerIV;
 }
 

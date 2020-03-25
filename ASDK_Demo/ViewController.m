@@ -9,26 +9,34 @@
 #import "ViewController.h"
 #import <AsyncDisplayKit/AsyncDisplayKit.h>
 #import "DemoNode.h"
-#import "FHHFPSIndicator.h"
 #import "MJRefresh.h"
+#import "YYFPSLabel.h"
+
 @interface ViewController () <ASCollectionDelegate, ASCollectionDataSource, UICollectionViewDelegateFlowLayout>
 {
     ASCollectionNode        *mainCollectionNode;
     NSMutableArray          *dataArray;
 }
+@property (strong, nonatomic) ASCollectionNode        *mainCollectionNode;
+@property (strong, nonatomic) NSMutableArray          *dataArray;
 @property (nonatomic, assign)   BOOL                        haveMore;
+
+@property (nonatomic, strong) YYFPSLabel *fpsLabel;
 
 @end
 
+
 @implementation ViewController
+@synthesize mainCollectionNode, dataArray;
+
+#define WeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     dataArray = @[].mutableCopy;
-
-    [[FHHFPSIndicator sharedFPSIndicator] show];
-
+ 
     [self initCollectionNode];
 
     [self addRefreshHeader];
@@ -41,6 +49,20 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
 
+        
+    //    Demo1: FPS label 用法
+        [self testFPSLabel];
+}
+
+    
+#pragma mark - FPS demo
+
+- (void)testFPSLabel {
+    _fpsLabel = [YYFPSLabel new];
+    _fpsLabel.frame = CGRectMake(200, 100, 300, 60);
+    [_fpsLabel sizeToFit];
+    [self.view addSubview:_fpsLabel];
+ 
 }
 
 
@@ -77,7 +99,7 @@
 {
     // 模拟网络请求
     _haveMore = YES;
-
+    @WeakObj(self);
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"fakeDic.json" ofType:@""];
         NSData *data = [NSData dataWithContentsOfFile:dataPath];
@@ -88,10 +110,10 @@
             return ;
         }
         NSArray *array = [json objectForKey:@"data"];
-        [dataArray addObjectsFromArray:array];
-        [mainCollectionNode reloadData];
+        [selfWeak.dataArray addObjectsFromArray:array];
+        [selfWeak.mainCollectionNode reloadData];
 
-        [mainCollectionNode.view.mj_header endRefreshing];
+        [selfWeak.mainCollectionNode.view.mj_header endRefreshing];
 
     });
 }
@@ -114,7 +136,7 @@
         return ;
     }
     NSLog(@"obj        %@", json);
-     
+ 
     NSArray *products = [json objectForKey:@"data"];
         if (context) {
             // 加载更多
@@ -125,17 +147,19 @@
                 }
 
                 [dataArray addObjectsFromArray:products];
+                __weak typeof(self) weakSelf = self;
+
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [mainCollectionNode insertItemsAtIndexPaths:indexPaths];
+                    [weakSelf.mainCollectionNode insertItemsAtIndexPaths:indexPaths];
 
                 });
 
                 _haveMore = YES;
-
-                if (products.count < 50) {
-                    _haveMore = NO;
-                    [mainCollectionNode.view.mj_footer endRefreshingWithNoMoreData];
-                }
+                // 注释掉，无限添加
+//                if (products.count < 500) {
+//                    _haveMore = NO;
+//                    [mainCollectionNode.view.mj_footer endRefreshingWithNoMoreData];
+//                }
             }else {
                 _haveMore = NO;
 
@@ -180,10 +204,12 @@
 
 - (ASCellNodeBlock)collectionNode:(ASCollectionNode *)collectionNode nodeBlockForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ASCellNode *(^cellNodeBlock)() = ^ASCellNode *(){
+    @WeakObj(self);
+
+    ASCellNode *(^cellNodeBlock)(void) = ^ASCellNode *(){
         NSDictionary *dic = [NSDictionary dictionary];
-        if (dataArray && dataArray.count) {
-            dic = dataArray [indexPath.row];
+        if (selfWeak.dataArray && selfWeak.dataArray.count) {
+            dic = selfWeak.dataArray [indexPath.row];
         }
         DemoNode *cellNode = [[DemoNode alloc] initWithData: dic];
         return cellNode;
