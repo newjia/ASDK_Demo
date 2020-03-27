@@ -1,5 +1,4 @@
 PODS:
-  - LHPerformanceStatusBar (0.1.0)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
     - PINCache/Core (= 3.0.1-beta.6)
@@ -40,13 +39,11 @@ PODS:
     - Texture/Core
 
 DEPENDENCIES:
-  - LHPerformanceStatusBar
   - SDWebImage
   - Texture
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
-    - LHPerformanceStatusBar
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -54,13 +51,12 @@ SPEC REPOS:
     - Texture
 
 SPEC CHECKSUMS:
-  LHPerformanceStatusBar: 068e2e40ccfac5be9c8ca2c1545daad92fb9b366
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
   Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
 
-PODFILE CHECKSUM: a34431d1315bb3bbf5da0fe6bcb51d556090221a
+PODFILE CHECKSUM: 65b90dd8be6ded68d570fba93e78cff3d90f4fd9
 
 COCOAPODS: 1.9.1
