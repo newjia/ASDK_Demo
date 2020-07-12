@@ -1,6 +1,6 @@
 //
 //  GridBlockNode.h
-//  MultScrollViewDemo-ASDK
+//  ASDK_Demo
 //
 //  Created by Li Jia on 2018/2/1.
 //  Copyright © 2018年 Nils Li. All rights reserved.

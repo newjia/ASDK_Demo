@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  MultScrollViewDemo-ASDK
+//  ASDK_Demo
 //
 //  Created by newjia on 2017/7/24.
 //  Copyright © 2017年 Nils Li. All rights reserved.
@@ -13,71 +13,65 @@
 #import "YYFPSLabel.h"
 
 @interface ViewController () <ASCollectionDelegate, ASCollectionDataSource, UICollectionViewDelegateFlowLayout>
-{
-    ASCollectionNode        *mainCollectionNode;
-    NSMutableArray          *dataArray;
-}
+
 @property (strong, nonatomic) ASCollectionNode        *mainCollectionNode;
 @property (strong, nonatomic) NSMutableArray          *dataArray;
-@property (nonatomic, assign)   BOOL                        haveMore;
 
+// 判断是否可以加载更多信息
+@property (nonatomic, assign)   BOOL                  haveMore;
+
+// 判断当前页面屏幕刷新帧率的小插件
 @property (nonatomic, strong) YYFPSLabel *fpsLabel;
 
 @end
 
-
 @implementation ViewController
-@synthesize mainCollectionNode, dataArray;
+@synthesize dataArray;
 
 #define WeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     dataArray = @[].mutableCopy;
- 
+    
     [self initCollectionNode];
-
+    
     [self addRefreshHeader];
     //加载数据
     [self loadData];
-
+    
     if (@available(iOS 11.0, *)) {
-        mainCollectionNode.view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.mainCollectionNode.view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     } else {
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
-
-        
-    //    Demo1: FPS label 用法
-        [self testFPSLabel];
-}
-
     
-#pragma mark - FPS demo
-
-- (void)testFPSLabel {
-    _fpsLabel = [YYFPSLabel new];
-    _fpsLabel.frame = CGRectMake(200, 100, 300, 60);
-    [_fpsLabel sizeToFit];
-    [self.view addSubview:_fpsLabel];
- 
+    //    Demo1: FPS label 用法
+    [self.view addSubview:self.fpsLabel];
 }
 
+
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    CGFloat topEdge = CGRectGetMaxY(self.navigationController.navigationBar.frame) + CGRectGetMaxY(UIApplication.sharedApplication.statusBarFrame);
+    self.mainCollectionNode.frame = CGRectMake(0, topEdge, self.view.frame.size.width, self.view.frame.size.height - topEdge);
+}
 
 - (void)addRefreshHeader
 {
-    mainCollectionNode.view.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self
-                                                                          refreshingAction:@selector(loadData)];
+    self.mainCollectionNode.view.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self
+                                                                         refreshingAction:@selector(loadData)];
 }
 
 - (void)addRefreshFooter
 {
-    mainCollectionNode.view.mj_footer = [MJRefreshAutoNormalFooter  footerWithRefreshingTarget:self
-                                                                               refreshingAction:@selector(loadMoreData)];
-    mainCollectionNode.view.mj_footer.automaticallyHidden = YES;
-
+    self.mainCollectionNode.view.mj_footer = [MJRefreshAutoNormalFooter  footerWithRefreshingTarget:self
+                                                                              refreshingAction:@selector(loadMoreData)];
+    self.mainCollectionNode.view.mj_footer.automaticallyHidden = YES;
+    
 }
 
 - (void)initCollectionNode
@@ -86,13 +80,13 @@
     layout.minimumLineSpacing = 0;
     layout.minimumInteritemSpacing = 10;
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    mainCollectionNode = [[ASCollectionNode alloc] initWithCollectionViewLayout:layout];
-    mainCollectionNode.dataSource = self;
-    mainCollectionNode.delegate = self;
     
-    mainCollectionNode.backgroundColor = [UIColor whiteColor];
-    [self.view addSubnode:mainCollectionNode];
-
+    self.mainCollectionNode = [[ASCollectionNode alloc] initWithCollectionViewLayout:layout];
+    self.mainCollectionNode.dataSource = self;
+    self.mainCollectionNode.delegate = self;
+    self.mainCollectionNode.backgroundColor = [UIColor whiteColor];
+    [self.view addSubnode:self.mainCollectionNode];
+    
 }
 
 - (void)loadData
@@ -111,10 +105,10 @@
         }
         NSArray *array = [json objectForKey:@"data"];
         [selfWeak.dataArray addObjectsFromArray:array];
-        [selfWeak.mainCollectionNode reloadData];
-
-        [selfWeak.mainCollectionNode.view.mj_header endRefreshing];
-
+        [selfWeak.self.mainCollectionNode reloadData];
+        
+        [selfWeak.self.mainCollectionNode.view.mj_header endRefreshing];
+        
     });
 }
 - (void)collectionNode:(ASCollectionNode *)collectionNode willBeginBatchFetchWithContext:(ASBatchContext *)context
@@ -136,65 +130,69 @@
         return ;
     }
     NSLog(@"obj        %@", json);
- 
+    
     NSArray *products = [json objectForKey:@"data"];
-        if (context) {
-            // 加载更多
-            if (products.count > 0) {
-                NSMutableArray *indexPaths = [NSMutableArray array];
-                for (NSInteger row = dataArray.count; row< products.count+ dataArray.count; ++row) {
-                    [indexPaths addObject:[NSIndexPath indexPathForRow:row inSection:0]];
-                }
-
-                [dataArray addObjectsFromArray:products];
-                __weak typeof(self) weakSelf = self;
-
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [weakSelf.mainCollectionNode insertItemsAtIndexPaths:indexPaths];
-
-                });
-
-                _haveMore = YES;
-                // 注释掉，无限添加
-//                if (products.count < 500) {
-//                    _haveMore = NO;
-//                    [mainCollectionNode.view.mj_footer endRefreshingWithNoMoreData];
-//                }
-            }else {
-                _haveMore = NO;
-
-                [mainCollectionNode.view.mj_footer endRefreshingWithNoMoreData];
+    if (context) {
+        // 加载更多
+        if (products.count > 0) {
+            NSMutableArray *indexPaths = [NSMutableArray array];
+            for (NSInteger row = dataArray.count; row< products.count+ dataArray.count; ++row) {
+                [indexPaths addObject:[NSIndexPath indexPathForRow:row inSection:0]];
             }
+            
+            [dataArray addObjectsFromArray:products];
+            __weak typeof(self) weakSelf = self;
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.self.mainCollectionNode insertItemsAtIndexPaths:indexPaths];
+                
+            });
+            
+            _haveMore = YES;
+            // 注释掉，无限添加
+            //                if (products.count < 500) {
+            //                    _haveMore = NO;
+            //                    [self.mainCollectionNode.view.mj_footer endRefreshingWithNoMoreData];
+            //                }
+        }else {
+            _haveMore = NO;
+            
+            [self.mainCollectionNode.view.mj_footer endRefreshingWithNoMoreData];
         }
-
-        if (context) {
-            [context completeBatchFetching:YES];
-        }
+    }
+    
+    if (context) {
+        [context completeBatchFetching:YES];
+    }
 }
 
 
 - (void)loadMoreData
 {
     if (_haveMore) {
-        [mainCollectionNode.view.mj_footer endRefreshing];
+        [self.mainCollectionNode.view.mj_footer endRefreshing];
     }else{
-        [mainCollectionNode.view.mj_footer endRefreshingWithNoMoreData];
+        [self.mainCollectionNode.view.mj_footer endRefreshingWithNoMoreData];
     }
 }
 
+#pragma mark - FPS Layzy
 
+- (YYFPSLabel *)fpsLabel {
+    if (!_fpsLabel) {
+         _fpsLabel = [YYFPSLabel new];
+         _fpsLabel.frame = CGRectMake(200, 100, 300, 60);
+         [_fpsLabel sizeToFit];
+    }
+    return _fpsLabel;
+    
+}
 
 #pragma mark - ASCollectionDataSource
 - (BOOL)shouldBatchFetchForCollectionNode:(ASCollectionNode *)collectionNode
 {
     return  dataArray.count && _haveMore;
-
-}
-
-- (void)viewWillLayoutSubviews
-{
-    [super viewWillLayoutSubviews];
-    mainCollectionNode.frame = CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height - 88);
+    
 }
 
 - (NSInteger)collectionNode:(ASCollectionNode *)collectionNode numberOfItemsInSection:(NSInteger)section
@@ -205,7 +203,7 @@
 - (ASCellNodeBlock)collectionNode:(ASCollectionNode *)collectionNode nodeBlockForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     @WeakObj(self);
-
+    
     ASCellNode *(^cellNodeBlock)(void) = ^ASCellNode *(){
         NSDictionary *dic = [NSDictionary dictionary];
         if (selfWeak.dataArray && selfWeak.dataArray.count) {
