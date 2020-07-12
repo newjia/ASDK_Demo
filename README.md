@@ -52,7 +52,7 @@
 
 1. `nodeBlockForItemAtIndexPath`方法
 
-   ```cpp
+   ```objective-c
    - (ASCellNodeBlock)collectionNode:(ASCollectionNode *)collectionNode nodeBlockForItemAtIndexPath:(NSIndexPath *)indexPath
    {
        @WeakObj(self);
@@ -73,7 +73,7 @@
 
    - 添加横向滚动式图。在view 创建后的`didLoad`方法里，添加横向一个`UICollectionView`
 
-     ```cpp
+     ```objective-c
      - (void)didLoad
      {
          [super didLoad];
@@ -89,7 +89,7 @@
 
    - 添加一个ASCollectionNode 用来在ASDK布局里的占位，部署横向轮播布局的尺寸
 
-     ```cpp
+     ```objective-c
      
      - (instancetype)initWithData: (id)info
      {
@@ -107,7 +107,7 @@
 
    - 将ASCollectionNode 的frame 赋给 UICollectionView，确定横向滚动图的frame
 
-     ```c
+     ```objective-c
      - (void)layout
      {
          [super layout];
@@ -124,7 +124,7 @@
 
 - 实现图片的简单初始化
 
-  ```cpp
+  ```objective-c
   - (instancetype)initWithFrame:(CGRect)frame
   {
       if (self = [super initWithFrame:frame]) {
@@ -142,7 +142,7 @@
 
 - 对图片进行菊花图，及布局
 
-  ```cpp
+  ```objective-c
   
   - (void)setImageUrl:(NSString *)imageUrl
    
